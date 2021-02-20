@@ -2,5 +2,7 @@
 
 $assistant: 'Assistant', sans-serif;
 $myriadPro: 'MyriadPro', sans-serif;
+$segoeEmoji: 'Segoe UI Emoji', sans-serif;
 
 @include font('MyriadPro', 'MyriadPro-Regular', 400, normal);
+@include font('Segoe UI Emoji', 'seguiemj', 400, normal);

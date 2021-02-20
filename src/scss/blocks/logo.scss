@@ -1,3 +1,13 @@
 .logo {
+	&__img {
+		&--main {
+			width: 106px;
+			height: 36px;
+		}
 
+		&--single {
+			width: 32px;
+			height: 32px;
+		}
+	}
 }

@@ -1,3 +1,63 @@
 .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 10px;
+	margin-right: 12px; // delete
+	box-shadow: 0 0 5px rgba($black, .15);
 
+	&__controls {
+		display: flex;
+		margin-left: auto;
+		margin-right: 50px;
+	}
+
+	&__control {
+		position: relative;
+		@extend %text--semimedium;
+		color: $midGray;
+
+
+		&--feedback {
+			margin-right: 37px;
+			padding-left: 32px;
+
+			&:before {
+				content: url(../img/feedback.png);
+				width: 19px;
+				height: 19px;
+			}
+		}
+
+		&--help {
+			padding-left: 28px;
+
+			&:before {
+				content: url(../img/help.png);
+				width: 16px;
+				height: 17px;
+			}
+		}
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+	}
+
+	&__name {
+		@extend %text--semimedium;
+		font-family: $segoeEmoji;
+		margin-right: 10px;
+	}
+
+	&__btn {
+		margin-right: 8px;
+	}
 }

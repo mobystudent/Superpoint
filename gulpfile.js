@@ -41,7 +41,7 @@ const dirBuild = 'build',
 			pug: dirSrc + '/template',
 			fonts: dirBuild + '/fonts',
 			favicon: dirBuild + '/favicon',
-			img: dirBuild + '/images',
+			img: dirBuild + '/img',
 			js: dirBuild + '/js'
 		},
 		src: {
@@ -50,8 +50,8 @@ const dirBuild = 'build',
 			pug: dirSrc + '/pug/**/*.pug',
 			fonts: dirSrc + '/fonts/*.{ttf,otf}',
 			favicon: dirSrc + '/favicon/*',
-			imgBg: dirSrc + '/images/backgrounds/*',
-			imgPic: dirSrc + '/images/pictures/*',
+			imgBg: dirSrc + '/img/backgrounds/*',
+			imgPic: dirSrc + '/img/pictures/*',
 			js: dirSrc + '/js/script.js'
 		},
 		watch: {
@@ -60,8 +60,8 @@ const dirBuild = 'build',
 			pug: dirSrc + '/pug/**/*.pug',
 			fonts: dirSrc + '/fonts/*',
 			favicon: dirSrc + '/favicon/*',
-			imgBg: dirSrc + '/images/backgrounds/*',
-			imgPic: dirSrc + '/images/pictures/*',
+			imgBg: dirSrc + '/img/backgrounds/*',
+			imgPic: dirSrc + '/img/pictures/*',
 			js: dirSrc + '/js/**/*.js'
 		}
 	};
