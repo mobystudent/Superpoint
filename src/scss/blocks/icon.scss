@@ -1,3 +1,38 @@
 .icon {
-	
+	&--feedback {
+		width: 19px;
+		height: 19px;
+	}
+
+	&--help {
+		width: 16px;
+		height: 16px;
+	}
+
+	&--arrow {
+		width: 13px;
+		height: 7px;
+	}
+
+	&--step {
+		&-1 {
+			width: 16px;
+			height: 12px;
+		}
+
+		&-2 {
+			width: 16px;
+			height: 14px;
+		}
+
+		&-3 {
+			width: 14px;
+			height: 14px;
+		}
+
+		&-4 {
+			width: 16px;
+			height: 13px;
+		}
+	}
 }

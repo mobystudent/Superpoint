@@ -9,5 +9,30 @@ block content
 		include includes/header
 		
 		main.main
+			.step
+				.step__item.step__item--done
+					span.step__name
+						| 1. Step
+					.step__icon.step__icon--1
+						svg.icon.icon--step-1
+							use.icon__item(xlink:href='#step1')
+				.step__item.step__item--done
+					span.step__name.step__name--2
+						| 2. Step
+					.step__icon.step__icon--2
+						svg.icon.icon--step-2
+							use.icon__item(xlink:href='#step2')
+				.step__item.step__item--active
+					span.step__name.step__name--3
+						| 3. Step
+					.step__icon.step__icon--3
+						svg.icon.icon--step-3
+							use.icon__item(xlink:href='#step3')
+				.step__item
+					span.step__name.step__name--4
+						| 4. Step
+					.step__icon.step__icon--4
+						svg.icon.icon--step-4
+							use.icon__item(xlink:href='#step4')
 			
 		include includes/footer
