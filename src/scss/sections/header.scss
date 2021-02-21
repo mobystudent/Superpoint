@@ -17,6 +17,16 @@
 
 	&__control {
 		position: relative;
+		display: flex;
+		align-items: center;
+
+		&--feedback {
+			margin-right: 37px;
+		}
+	}
+
+	&__control-text {
+		display: inline-block;
 		@extend %text--semimedium;
 		color: $midGray;
 		transition: color .25s ease;
@@ -26,30 +36,11 @@
 		}
 
 		&--feedback {
-			margin-right: 37px;
-			padding-left: 32px;
-
-			&:before {
-				content: url(../img/feedback.png);
-				width: 19px;
-				height: 19px;
-			}
+			padding-left: 14px;
 		}
 
 		&--help {
-			padding-left: 28px;
-
-			&:before {
-				content: url(../img/help.png);
-				width: 16px;
-				height: 17px;
-			}
-		}
-
-		&:before {
-			position: absolute;
-			top: 0;
-			left: 0;
+			padding-left: 12px;
 		}
 	}
 

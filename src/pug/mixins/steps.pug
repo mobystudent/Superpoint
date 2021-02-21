@@ -10,7 +10,7 @@ mixin steps(number)
 				- step = ''
 				
 			.step__item(class=`${step}`)
-				span.step__name
+				span.step__name(class=`step__name--${i + 1}`)
 					| #{i + 1}. Step
 				.step__icon(class=`step__icon--${i + 1}`)
 					svg.icon(class=`icon--step-${i + 1}`)

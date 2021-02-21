@@ -4,9 +4,15 @@ header.header
 			img.img__item(src="img/logo.png" alt="logo")
 	.header__controls
 		a.header__control.header__control--feedback(href="#")
-			| Feedback
+			svg.icon.icon--feedback
+				use.icon__item(xlink:href='#feedback')
+			span.header__control-text.header__control-text--feedback
+				| Feedback
 		a.header__control.header__control--help(href="#")
-			| Help
+			svg.icon.icon--help
+				use.icon__item(xlink:href='#help')
+			span.header__control-text.header__control-text--help
+				| Help
 	.header__wrap
 		button#showSettings.header__btn(type="button")
 			span.header__user
