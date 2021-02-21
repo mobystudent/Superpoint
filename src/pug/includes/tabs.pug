@@ -9,6 +9,6 @@ nav.tabs
 				li.tabs__item(class=`${ i === 0 ? 'tabs__item--active' : '' }`)
 					button.tabs__btn.tabs__btn--point(type="button" data-tab=`${i + 1}`)
 						svg.icon.icon--point(class=`icon--point-${i + 1}`)
-							use.icon__item(xlink:href=`#tab${i + 1}`)
+							use.icon__item(xlink:href=`${ i === 0 ? `#tab${i + 1}a` : `#tab${i + 1}`}`)
 						span.tabs__name
 							| Point #{i + 1}
