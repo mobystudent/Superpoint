@@ -29,8 +29,14 @@
 				background: $turquoise;
 			}
 
-			.step__icon {
-				border-color: $turquoise;
+			.step {
+				&__icon {
+					border-color: $turquoise;
+				}
+
+				&__name {
+					color: $turquoise;
+				}
 			}
 		}
 
@@ -39,9 +45,15 @@
 				background: $turquoise;
 			}
 
-			.step__icon {
-				border-color: $turquoise;
-				background: $turquoise;
+			.step {
+				&__icon {
+					border-color: $turquoise;
+					background: $turquoise;
+				}
+
+				&__name {
+					color: $turquoise;
+				}
 			}
 		}
 	}
@@ -49,7 +61,7 @@
 	&__name {
 		display: inline-block;
 		@extend %text--medium;
-		color: $turquoise;
+		color: $gray;
 		margin-bottom: 18px;
 
 		&--2, &--3 {

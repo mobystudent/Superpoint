@@ -9,73 +9,11 @@ block content
 		include includes/header
 		
 		main.main
-			.step
-				.step__item.step__item--done
-					span.step__name
-						| 1. Step
-					.step__icon.step__icon--1
-						svg.icon.icon--step-1
-							use.icon__item(xlink:href='#step1')
-				.step__item.step__item--done
-					span.step__name.step__name--2
-						| 2. Step
-					.step__icon.step__icon--2
-						svg.icon.icon--step-2
-							use.icon__item(xlink:href='#step2')
-				.step__item.step__item--active
-					span.step__name.step__name--3
-						| 3. Step
-					.step__icon.step__icon--3
-						svg.icon.icon--step-3
-							use.icon__item(xlink:href='#step3')
-				.step__item
-					span.step__name.step__name--4
-						| 4. Step
-					.step__icon.step__icon--4
-						svg.icon.icon--step-4
-							use.icon__item(xlink:href='#step4')
-								
-			form.form
-				h3.form__title.form__title--fraction
-					| Shipper Details
-				.form__wrap.form__wrap--company
-					.form__field
-						label.form__label.form__label--search
-							input.form__input(type="search" placeholder="Company Autocomplete")
-							button.form__btn.form__btn--search
-								svg.icon.icon--loupe
-									use.icon__item(xlink:href='#loupe')
-					.form__field
-						h4.form__title.form__title--field
-							| Company name
-						label.form__label
-							input.form__input(type="text" placeholder="Company name")
-				h3.form__title.form__title--fraction.form__title--fract-2
-					| Shipment Details
-				.form__table
-					header.form__header
-						- const arrFormName = ['Handling Unit Type (H/U)', '# of H/U', 'H/U Dimensions', 'Stackable', 'Commodity Descriprion', 'NMFC', 'Class', '# of Pieces', 'Total Weight', 'HazMat'];
-							
-						each titles in arrFormName
-							.form__col.form__col--header
-								span.form__name!=titles
-								
-					.form__body
-						+form-line({type: 'Pallets', hu: 3, demin: '15 х 25 х 23 in', stackable: 'Yes', descrip: 'Multigrain Snacks..., 300', classId: 1, pieces: 1, weight: '400 lbs', hazmat: false, typeLine: 'info'})
-						+form-line({type: '', hu: '', demin: '', stackable: '', descrip: 'Multigrain Snacks..., 300', classId: 1, pieces: 1, weight: '400 lbs', hazmat: true, typeLine: 'info'})
-						+form-line({typeLine: 'add'})
-						+form-line({type: 'Pallets', hu: 3, demin: '15 х 25 х 23 in', stackable: 'Yes', descrip: 'Multigrain Snacks..., 300', classId: 1, pieces: 1, weight: '400 lbs', hazmat: false, typeLine: 'info'})
-					footer.form__footer
-						label.form__label.form__label--checkbox.form__label--agree
-							if (hazmat)
-								input.form__input.form__input--checkbox(type="checkbox" checked)
-							else
-								input.form__input.form__input--checkbox(type="checkbox")
-							small.form__cell.form__cell--agree
-							p.form__text.form__text--agree
-								| I agree to the 
-								a.form__link(href="#")
-									| Terms and Conditions
-						input.form__btn.form__btn--submit(type="submit" value="Dispatch")
+			include  includes/content-1
+			include  includes/content-2
+			include  includes/content-3
+			include  includes/content-4
+			include  includes/content-5
+			include  includes/content-6
 							
 		include  includes/tabs

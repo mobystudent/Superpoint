@@ -7,11 +7,21 @@ header.header
 			| Feedback
 		a.header__control.header__control--help(href="#")
 			| Help
-	.header__user
-		span.header__name
-			| John Johnson
-		button.header__btn
-			svg.icon.icon--arrow
-				use.icon__item(xlink:href='#arrow')
+	.header__wrap
+		button#showSettings.header__btn(type="button")
+			span.header__user
+				| John Johnson
+			.header__icon
+				svg.icon.icon--arrow
+					use.icon__item(xlink:href='#arrow')
+
+			- const settings = ['Edit', 'Settings', 'Sing out'];
+			
+			ul.header__list
+				each item in settings
+					li.header__item
+						a.header__link(href="#")
+							!=item
+
 		picture.logo__img.logo__img--single.img
 			img.img__item(src="img/logo-single.png" alt="logo-single")

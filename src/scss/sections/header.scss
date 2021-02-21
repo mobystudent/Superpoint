@@ -19,7 +19,11 @@
 		position: relative;
 		@extend %text--semimedium;
 		color: $midGray;
+		transition: color .25s ease;
 
+		&:hover {
+			color: $turquoise;
+		}
 
 		&--feedback {
 			margin-right: 37px;
@@ -49,18 +53,53 @@
 		}
 	}
 
-	&__user {
+	&__btn {
+		position: relative;
 		display: flex;
 		align-items: center;
 	}
 
-	&__name {
+	&__user {
 		@extend %text--semimedium;
 		font-family: $segoeEmoji;
 		margin-right: 10px;
+		color: $darkGray;
 	}
 
-	&__btn {
+	&__wrap {
+		display: flex;
+	}
+
+	&__icon {
 		margin-right: 8px;
+	}
+
+	&__list {
+		position: absolute;
+		top: 30px;
+		right: 5px;
+		display: none;
+		width: 100%;
+		background: $white;
+		box-shadow: 0 0 2px 0 rgba($black, .15);
+		padding: 10px 20px;
+	}
+
+	&__item {
+		text-align: left;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__link {
+		@extend %text--semimedium;
+		color: $darkGray;
+		transition: color .25s ease;
+
+		&:hover {
+			color: $turquoise;
+		}
 	}
 }

@@ -1,0 +1,17 @@
+mixin steps(number)
+	.step
+		- let step = '';
+		- for (let i = 0; i < 4; i++)
+			if (i < number.step - 1)
+				- step = 'step__item--done';
+			else if (i === number.step - 1)
+				- step = 'step__item--active';
+			else
+				- step = ''
+				
+			.step__item(class=`${step}`)
+				span.step__name
+					| #{i + 1}. Step
+				.step__icon(class=`step__icon--${i + 1}`)
+					svg.icon(class=`icon--step-${i + 1}`)
+						use.icon__item(xlink:href=`#step${i + 1}`)

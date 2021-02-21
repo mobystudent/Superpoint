@@ -1,5 +1,5 @@
 nav.tabs
-	.tabs__wrap.tabs__wrap--active
+	.tabs__wrap
 		button#showtabs.tabs__btn.tabs__btn--show(type="button")
 			svg.icon.icon--switch
 				use.icon__item(xlink:href='#switch')
@@ -7,8 +7,8 @@ nav.tabs
 			
 			- for (let i = 0; i < 6; i++)
 				li.tabs__item(class=`${ i === 0 ? 'tabs__item--active' : '' }`)
-					button.tabs__btn.tabs__btn--point(type="button" data-tab=`point-${i + 1}`)
-						svg.icon(class=`icon--point-${i + 1}`)
+					button.tabs__btn.tabs__btn--point(type="button" data-tab=`${i + 1}`)
+						svg.icon.icon--point(class=`icon--point-${i + 1}`)
 							use.icon__item(xlink:href=`#tab${i + 1}`)
 						span.tabs__name
 							| Point #{i + 1}

@@ -65,9 +65,15 @@
 		border-bottom: 1px solid $gray;
 		padding: 2px 0;
 		color: $darkGray;
+		transition: border-color .25s ease;
 
 		&::placeholder {
 			color: $gray;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: $turquoise;
 		}
 
 		&--checkbox {
@@ -219,7 +225,7 @@
 			height: 100%;
 			border-radius: 2px;
 			border: 1px solid $gray;
-			transition: opacity .25s ease;
+			transition: opacity .25s ease, border-color .25s ease;
 		}
 
 		&:after {
@@ -231,6 +237,10 @@
 			height: 16px;
 			opacity: 0;
 			transition: opacity .25s ease;
+		}
+
+		&:hover:before {
+			border-color: $turquoise;
 		}
 
 		&--hazmat {
