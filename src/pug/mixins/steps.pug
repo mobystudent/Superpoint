@@ -1,15 +1,19 @@
 mixin steps(number)
 	.step
 		- let step = '';
+		- let status = '';
 		- for (let i = 0; i < 4; i++)
 			if (i < number.step - 1)
 				- step = 'step__item--done';
+				- status = 'done';
 			else if (i === number.step - 1)
 				- step = 'step__item--active';
+				- status = 'in progress';
 			else
-				- step = ''
+				- step = '';
+				- status = '';
 				
-			.step__item(class=`${step}`)
+			.step__item(class=`${step}` data-status=`${status}`)
 				span.step__name(class=`step__name--${i + 1}`)
 					| #{i + 1}. Step
 				.step__icon(class=`step__icon--${i + 1}`)

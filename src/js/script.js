@@ -6,6 +6,7 @@ $(window).on('load', () => {
 	showTabs();
 	showSettings();
 	toggleTabs();
+	showNav();
 });
 
 function showTabs() {
@@ -27,5 +28,11 @@ function toggleTabs() {
 
 		$('.main__content').hide();
 		$(`.main__content[data-content=${numberTab}]`).show();
+	});
+}
+
+function showNav() {
+	$('#burger').click(function() {
+		$(this).toggleClass('header__burger--active');
 	});
 }

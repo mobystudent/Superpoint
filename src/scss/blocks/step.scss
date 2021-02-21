@@ -3,6 +3,15 @@
 	grid-template-columns: 138px repeat(3, 1fr);
 	margin-bottom: 26px;
 
+	@media screen and (max-width: 767px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media screen and (max-width: 499px) {
+		grid-template: repeat(4, 1fr) / 130px;
+		row-gap: 10px;
+	}
+
 	&__item {
 		display: flex;
 		align-items: flex-end;
@@ -22,11 +31,36 @@
 			height: 2px;
 			transform: translateY(4px);
 			background: $gray;
+
+			@media screen and (max-width: 499px) {
+				display: none;
+			}
+		}
+
+		&:after {
+			content: attr(data-status);
+			display: none;
+			position: absolute;
+			right: -75%;
+			@extend %text--semimedium;
+
+			@media screen and (max-width: 499px) {
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 499px) {
+			align-items: center;
+			justify-content: space-between;
 		}
 
 		&--active {
 			&:before {
 				background: $turquoise;
+			}
+
+			&:after {
+				color: $gray;
 			}
 
 			.step {
@@ -43,6 +77,10 @@
 		&--done {
 			&:before {
 				background: $turquoise;
+			}
+
+			&:after {
+				color: $turquoise;
 			}
 
 			.step {
@@ -70,6 +108,10 @@
 
 		&--4 {
 			margin-right: 4px;
+		}
+
+		@media screen and (max-width: 499px) {
+			margin: 0;
 		}
 	}
 

@@ -3,11 +3,20 @@
 		&--main {
 			width: 106px;
 			height: 36px;
+
+			@media screen and (max-width: 499px) {
+				width: 90px;
+				height: 31px;
+			}
 		}
 
 		&--single {
 			width: 32px;
 			height: 32px;
+
+			@media screen and (max-width: 499px) {
+				display: none;
+			}
 		}
 	}
 }
