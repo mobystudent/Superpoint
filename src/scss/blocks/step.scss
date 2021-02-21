@@ -1,6 +1,7 @@
 .step {
 	display: grid;
 	grid-template-columns: 138px repeat(3, 1fr);
+	margin-bottom: 26px;
 
 	&__item {
 		display: flex;

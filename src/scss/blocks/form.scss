@@ -1,0 +1,264 @@
+.form {
+	&__title {
+		&--fraction {
+			display: inline-block;
+			position: relative;
+			@extend %text--medium;
+			color: $turquoise;
+			margin-bottom: 5px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: $orange;
+			}
+		}
+
+		&--fract-2 {
+			margin-bottom: 8px;
+		}
+
+		&--field {
+			@extend %text--small;
+			font-family: $segoeEmoji;
+			color: $gray;
+			margin-bottom: 3px;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: flex-end;
+
+		&--company {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__field {
+		width: 300px;
+
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+
+	&__label {
+		display: flex;
+
+		&--search {
+			position: relative;
+		}
+
+		&--agree {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		@extend %text--medium;
+		border-bottom: 1px solid $gray;
+		padding: 2px 0;
+		color: $darkGray;
+
+		&::placeholder {
+			color: $gray;
+		}
+
+		&--checkbox {
+			display: none;
+
+			&:checked + .form__cell {
+				&:before {
+					opacity: 0;
+				}
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		&--search {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			padding: 0 5px;
+		}
+
+		&--submit {
+			min-width: 220px;
+			padding: 9px 15px;
+			border-radius: 2px;
+			box-shadow: 0 2px 2px 0 rgba($black, .15);
+			@extend %text--medium;
+			font-weight: 400;
+			color: $white;
+			text-transform: uppercase;
+			background-color: $dimOrange;
+		}
+	}
+
+	&__header {
+		display: flex;
+		border-bottom: 1px solid $gray;
+		padding-bottom: 6px;
+	}
+
+	&__body {
+		padding-bottom: 51px;
+		border-bottom: 1px solid $gray;
+		margin-bottom: 20px;
+	}
+
+	&__line {
+		padding: 15px 0;
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+
+		&--add {
+			border-top: 1px solid $gray;
+			margin-left: 475px;
+		}
+	}
+
+	&__col {
+		// width: 100%;
+		// flex: 1 0 auto;
+
+		&--header {
+			@extend %text--semimedium;
+			color: $gray;
+		}
+
+		&--body {
+			@extend %text--medium;
+			color: $darkGray;
+
+			&:nth-child(4) {
+				text-align: center;
+			}
+
+			&:last-child {
+				padding-top: 5px;
+			}
+		}
+
+		&:not(:last-child) {
+			padding-right: 29px;
+		}
+
+		&:first-child {
+			width: 172px;
+		}
+
+		&:nth-child(2) {
+			width: 76px;
+		}
+
+		&:nth-child(3) {
+			width: 142px;
+		}
+
+		&:nth-child(4) {
+			width: 85px;
+		}
+
+		&:nth-child(5) {
+			flex: 1 1 auto;
+			max-width: 440px;
+			padding-right: 30px;
+		}
+
+		&:nth-child(6) {
+			padding-right: 30px;
+			width: 66px;
+		}
+
+		&:nth-child(7) {
+			width: 60px;
+		}
+
+		&:nth-child(8) {
+			width: 90px;
+		}
+
+		&:nth-child(9) {
+			width: 102px;
+		}
+
+		&:last-child {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 42px;
+		}
+	}
+
+	&__cell {
+		position: relative;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 2px;
+			border: 1px solid $gray;
+			transition: opacity .25s ease;
+		}
+
+		&:after {
+			content: url('../img/check.svg');
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 23px;
+			height: 16px;
+			opacity: 0;
+			transition: opacity .25s ease;
+		}
+
+		&--hazmat {
+			width: 20px;
+			height: 20px;
+		}
+
+		&--agree {
+			width: 18px;
+			height: 18px;
+			margin-right: 9px;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		flex-flow: column;
+		align-items: flex-end;
+	}
+
+	&__text {
+		&--agree {
+			@extend %text--semimedium;
+			color: $darkGray;
+		}
+	}
+
+	&__link {
+		color: $turquoise;
+	}
+}

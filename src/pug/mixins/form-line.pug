@@ -1,0 +1,46 @@
+mixin form-line(obj)
+	- const { type = '', hu = '', demin = '', stackable = 'Yes', descrip = '', classId = 1, pieces = 1, weight = '', hazmat = false, typeLine = 'info' } = obj;
+
+	if (typeLine === 'info')
+		.form__line.form__line--info
+			.form__col.form__col--body(data-title="Handling Unit Type (H/U)")
+				span.form__value
+					!=type
+			.form__col.form__col--body(data-title="# of H/U")
+				span.form__value
+					!=hu
+			.form__col.form__col--body(data-title="H/U Dimensions")
+				span.form__value
+					!=demin
+			.form__col.form__col--body(data-title="Stackable")
+				span.form__value
+					!=stackable
+			.form__col.form__col--body(data-title="Commodity Descriprion")
+				label.form__label.form__label--search
+					input.form__input(type="search" placeholder="Commodity Descriprion" value=descrip)
+					button.form__btn.form__btn--search
+						svg.icon.icon--loupe
+							use.icon__item(xlink:href='#loupe')
+			.form__col.form__col--body(data-title="NMFC")
+				label.form__label
+					input.form__input(type="text" placeholder="NMFC")
+			.form__col.form__col--body(data-title="Class")
+				span.form__value
+					!=classId
+			.form__col.form__col--body(data-title="# of Pieces")
+				span.form__value
+					!=pieces
+			.form__col.form__col--body(data-title="Total Weight")
+				span.form__value
+					!=weight
+			.form__col.form__col--body(data-title="HazMat")
+				label.form__label.form__label--checkbox
+					if (hazmat)
+						input.form__input.form__input--checkbox(type="checkbox" checked)
+					else
+						input.form__input.form__input--checkbox(type="checkbox")
+					small.form__cell.form__cell--hazmat
+	else
+		.form__line.form__line--add
+			.form__wrap.form__wrap--fields
+				

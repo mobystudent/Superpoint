@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 16" width="23" height="16">
+	<defs>
+		<image width="23" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAQCAYAAAD9L+QYAAABRElEQVQ4T63TsU7CUBQG4P/YMDEZIAw6OTggg4OzSqLGGHUw2E1GQygMTm5GNyc30BjjpA4YJhId2lrbF/AhnHSQzRDBHiNRcqktuZX2Ab7/9pz/ECL+tut1JT2evmRglSK1mUkznDMAu0x8FR3OTCXDqRFQBHDz2nopRIP7wLeq+jk6HgB/j3s0XIQJzZTibh3mct3fPf4f98DJt0T+SM1+iAWhsm43mOm+ujJ/EaY5Zf3xhEF7IDT94N5YNN1+AjALcKm6vHgqE6AZ9jEY+8PgHl65c1Ic4wcGsjIBsnB/oULADBN2aksL135/EAYeaIsQkGFCwRvQhwEz2UqseZfn95iBtgQFCLDVacfXzzfm3mV286eK3gACTYP5AEAoOPCIiqY5obgxG+Cpn0MLDQ+90IplTbrdMRPAc6cd35QdhTiuLzdYwRaWptBUAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="- test">
+		<g id="Shipment Details">
+			<use id="Векторный смарт-объект копия 3" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+		</g>
+	</g>
+</svg>
