@@ -6,8 +6,10 @@ body {
 }
 
 .wrapper {
-	display: flex;
-	flex-flow: column;
+	display: grid;
+	grid-template: 'header header' auto
+					'nav main' 1fr
+					/ 50px 1fr;
 	min-height: 100vh;
 
 	&--hidden {
@@ -16,9 +18,10 @@ body {
 }
 
 .main {
+	grid-area: main;
 	flex: 1 0 auto;
 	position: relative;
 	z-index: 0;
 	overflow: hidden;
-	padding: 16px 23px 0 70px;
+	padding: 16px 23px 0 20px;
 }

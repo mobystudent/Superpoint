@@ -1,10 +1,13 @@
 .header {
+	position: relative;
+	grid-area: header;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px 10px 10px;
 	margin-right: 12px; // delete
 	box-shadow: 0 0 5px rgba($black, .15);
+	z-index: 3;
 
 	&__controls {
 		display: flex;
