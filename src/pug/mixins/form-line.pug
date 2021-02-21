@@ -16,7 +16,7 @@ mixin form-line(obj)
 				span.form__value
 					!=stackable
 			.form__col.form__col--body(data-title="Commodity Descriprion")
-				label.form__label.form__label--search
+				label.form__label.form__label--search.form__label--field
 					input.form__input(type="search" placeholder="Commodity Descriprion" value=descrip)
 					button.form__btn.form__btn--search
 						svg.icon.icon--loupe
@@ -34,7 +34,7 @@ mixin form-line(obj)
 				span.form__value
 					!=weight
 			.form__col.form__col--body(data-title="HazMat")
-				label.form__label.form__label--checkbox
+				label.form__label.form__label--checkbox.form__label--field
 					if (hazmat)
 						input.form__input.form__input--checkbox(type="checkbox" checked)
 					else

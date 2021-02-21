@@ -57,6 +57,13 @@
 		&--agree {
 			margin-bottom: 20px;
 		}
+
+		&--field {
+			@media screen and (max-width: 1199px) {
+				width: 50%;
+			}
+		}
+
 	}
 
 	&__input {
@@ -117,6 +124,10 @@
 		display: flex;
 		border-bottom: 1px solid $gray;
 		padding-bottom: 6px;
+
+		@media screen and (max-width: 1199px) {
+			display: none;
+		}
 	}
 
 	&__body {
@@ -137,6 +148,11 @@
 			border-top: 1px solid $gray;
 			margin-left: 475px;
 		}
+
+		@media screen and (max-width: 1199px) {
+			flex-flow: wrap;
+			justify-content: space-between;
+		}
 	}
 
 	&__col {
@@ -154,54 +170,111 @@
 
 			&:nth-child(4) {
 				text-align: center;
+
+				@media screen and (max-width: 1199px) {
+					text-align: left;
+				}
 			}
 
 			&:last-child {
 				padding-top: 5px;
 			}
+
+			@media screen and (max-width: 1199px) {
+				display: flex;
+				padding: 10px 0;
+
+				&:before {
+					width: 50%;
+					content: attr(data-title);
+					color: $gray;
+				}
+			}
 		}
 
 		&:not(:last-child) {
 			padding-right: 29px;
+
+			@media screen and (max-width: 1199px) {
+				padding-right: 0;
+			}
 		}
 
 		&:first-child {
 			width: 172px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(2) {
 			width: 76px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(3) {
 			width: 142px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(4) {
 			width: 85px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(5) {
 			flex: 1 1 auto;
 			max-width: 440px;
 			padding-right: 30px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+				max-width: 100%;
+				flex: 0 0 auto;
+			}
 		}
 
 		&:nth-child(6) {
 			padding-right: 30px;
 			width: 66px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(7) {
 			width: 60px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(8) {
 			width: 90px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:nth-child(9) {
 			width: 102px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
 		}
 
 		&:last-child {
@@ -209,6 +282,16 @@
 			justify-content: center;
 			align-items: center;
 			width: 42px;
+
+			@media screen and (max-width: 1199px) {
+				width: 49%;
+			}
+		}
+	}
+
+	&__value {
+		@media screen and (max-width: 1199px) {
+			width: 50%;
 		}
 	}
 
