@@ -5,68 +5,12 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px 10px 10px;
+	background: $white;
 	box-shadow: 0 0 5px rgba($black, .15);
-	z-index: 3;
+	z-index: 10;
 
 	@media screen and (max-width: 499px) {
 		padding-top: 10px;
-	}
-
-	&__controls {
-		display: flex;
-		margin-left: auto;
-		margin-right: 50px;
-
-		@media screen and (max-width: 767px) {
-			margin-right: 25px;
-		}
-
-		@media screen and (max-width: 499px) {
-			display: none;
-			// position: absolute;
-
-		}
-	}
-
-	&__control {
-		position: relative;
-		display: flex;
-		align-items: center;
-
-		&--feedback {
-			margin-right: 37px;
-
-			@media screen and (max-width: 767px) {
-				margin-right: 20px;
-			}
-		}
-	}
-
-	&__control-text {
-		display: inline-block;
-		@extend %text--semimedium;
-		color: $midGray;
-		transition: color .25s ease;
-
-		&:hover {
-			color: $turquoise;
-		}
-
-		&--feedback {
-			padding-left: 14px;
-
-			@media screen and (max-width: 767px) {
-				padding-left: 10px;
-			}
-		}
-
-		&--help {
-			padding-left: 12px;
-
-			@media screen and (max-width: 767px) {
-				padding-left: 10px;
-			}
-		}
 	}
 
 	&__btn {

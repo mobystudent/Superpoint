@@ -139,13 +139,13 @@
       <header class="header"><a class="logo" href="#">
           <picture class="logo__img logo__img--main img"><img class="img__item" src="img/logo.png" alt="logo"></picture></a>
         <button class="header__burger" id="burger" type="button"><small class="header__line"></small></button>
-        <div class="header__controls"><a class="header__control header__control--feedback" href="#">
+        <nav class="controls controls--desktop"><a class="controls__item controls__item--feedback" href="#">
             <svg class="icon icon--feedback">
               <use class="icon__item" xlink:href="#feedback"></use>
-            </svg><span class="header__control-text header__control-text--feedback">Feedback</span></a><a class="header__control header__control--help" href="#">
+            </svg><span class="controls__name controls__name--feedback">Feedback</span></a><a class="controls__item controls__item--help" href="#">
             <svg class="icon icon--help">
               <use class="icon__item" xlink:href="#help"></use>
-            </svg><span class="header__control-text header__control-text--help">Help</span></a></div>
+            </svg><span class="controls__name controls__name--help">Help</span></a></nav>
         <div class="header__wrap">
           <button class="header__btn" id="showSettings" type="button"><span class="header__user">John Johnson</span>
             <div class="header__icon">
@@ -1621,6 +1621,15 @@
           </ul>
         </div>
       </nav>
+      <div class="modal">
+        <nav class="controls controls--mobile"><a class="controls__item controls__item--feedback" href="#">
+            <svg class="icon icon--feedback">
+              <use class="icon__item" xlink:href="#feedback"></use>
+            </svg><span class="controls__name controls__name--feedback">Feedback</span></a><a class="controls__item controls__item--help" href="#">
+            <svg class="icon icon--help">
+              <use class="icon__item" xlink:href="#help"></use>
+            </svg><span class="controls__name controls__name--help">Help</span></a></nav>
+      </div>
     </div>
   </body>
 </html>

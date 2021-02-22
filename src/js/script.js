@@ -8,6 +8,7 @@ $(window).on('load', () => {
 	toggleTabs();
 	showNav();
 	showSteps(1);
+	resizeModalNav();
 });
 
 function showTabs() {
@@ -48,11 +49,20 @@ function toggleTabs() {
 function showNav() {
 	$('#burger').click(function() {
 		$(this).toggleClass('header__burger--active');
+		$('.modal').toggleClass('modal--active');
 	});
 }
 
+function resizeModalNav() {
+	$(window).resize(() => {
+		if (window.innerWidth >= 499) {
+			$('#burger').removeClass('header__burger--active');
+			$('.modal').removeClass('modal--active');
+		}
+	})
+}
+
 function showSteps(id) {
-	console.log(id);
 	$(`.main__content[data-content=${id}] .step__item`).map((i, item) => {
 		if ($(item).hasClass('step__item--done')) {
 			$(item).find('.icon__item').attr('xlink:href', `#step${i + 1}d`);

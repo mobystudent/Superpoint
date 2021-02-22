@@ -4,16 +4,16 @@ header.header
 			img.img__item(src="img/logo.png" alt="logo")
 	button#burger.header__burger(type="button")
 		small.header__line
-	.header__controls
-		a.header__control.header__control--feedback(href="#")
+	nav.controls.controls--desktop
+		a.controls__item.controls__item--feedback(href="#")
 			svg.icon.icon--feedback
 				use.icon__item(xlink:href='#feedback')
-			span.header__control-text.header__control-text--feedback
+			span.controls__name.controls__name--feedback
 				| Feedback
-		a.header__control.header__control--help(href="#")
+		a.controls__item.controls__item--help(href="#")
 			svg.icon.icon--help
 				use.icon__item(xlink:href='#help')
-			span.header__control-text.header__control-text--help
+			span.controls__name.controls__name--help
 				| Help
 	.header__wrap
 		button#showSettings.header__btn(type="button")
