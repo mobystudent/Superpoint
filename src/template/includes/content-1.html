@@ -33,7 +33,7 @@
   <form class="form" action="#">
     <h3 class="form__title form__title--fraction">Shipper Details</h3>
     <div class="form__wrap form__wrap--company">
-      <div class="form__field">
+      <div class="form__field form__field--company">
         <label class="form__label form__label--search">
           <input class="form__input" type="search" placeholder="Company Autocomplete"/>
           <button class="form__btn form__btn--search">
@@ -43,7 +43,7 @@
           </button>
         </label>
       </div>
-      <div class="form__field">
+      <div class="form__field form__field--company">
         <h4 class="form__title form__title--field">Company name</h4>
         <label class="form__label">
           <input class="form__input" type="text" placeholder="Company name"/>
@@ -124,7 +124,74 @@
           </div>
         </div>
         <div class="form__line form__line--add">
-          <div class="form__wrap form__wrap--fields"></div>
+          <div class="form__col form__col--body form__col--indent"></div>
+          <div class="form__col form__col--body form__col--indent"></div>
+          <div class="form__col form__col--body form__col--indent"></div>
+          <div class="form__col form__col--body form__col--indent"></div>
+          <div class="form__subline">
+            <div class="form__select form__select--add form__select--small">
+              <div class="form__select-header">
+                <div class="form__selected">UN</div>
+                <svg class="icon icon--triangle">
+                  <use class="icon__item" xlink:href="#triangle"></use>
+                </svg>
+              </div>
+              <ul class="form__list">
+                <li class="form__item">1
+                </li>
+                <li class="form__item">2
+                </li>
+                <li class="form__item">3
+                </li>
+                <li class="form__item">4
+                </li>
+              </ul>
+            </div>
+            <div class="form__field form__field--add form__field--small">
+              <label class="form__label">
+                <input class="form__input form__input--add" type="text" placeholder="UN Number"/>
+              </label>
+            </div>
+            <div class="form__field form__field--add form__field--large">
+              <label class="form__label">
+                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name"/>
+              </label>
+            </div>
+            <div class="form__field form__field--add form__field--large form__field--haz">
+              <label class="form__label form__label--haz">
+                <input class="form__input form__input--add" type="text" placeholder="Hazard Class"/>
+              </label>
+              <button class="form__btn form__btn--info" type="button">?</button>
+            </div>
+            <div class="form__select form__select--add form__select--large form__select--pgroup">
+              <div class="form__select-header">
+                <div class="form__selected">Packing Group</div>
+                <svg class="icon icon--triangle">
+                  <use class="icon__item" xlink:href="#triangle"></use>
+                </svg>
+              </div>
+              <ul class="form__list">
+                <li class="form__item">Group 1</li>
+                <li class="form__item">Group 2</li>
+                <li class="form__item">Group 3</li>
+                <li class="form__item">Group 4</li>
+              </ul>
+            </div>
+            <div class="form__select form__select--add form__select--large">
+              <div class="form__select-header">
+                <div class="form__selected">Packing Type</div>
+                <svg class="icon icon--triangle">
+                  <use class="icon__item" xlink:href="#triangle"></use>
+                </svg>
+              </div>
+              <ul class="form__list">
+                <li class="form__item">Type 1</li>
+                <li class="form__item">Type 2</li>
+                <li class="form__item">Type 3</li>
+                <li class="form__item">Type 4</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="form__line form__line--info">
           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>

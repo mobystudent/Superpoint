@@ -42,5 +42,56 @@ mixin form-line(obj)
 					small.form__cell.form__cell--hazmat
 	else
 		.form__line.form__line--add
-			.form__wrap.form__wrap--fields
+			.form__col.form__col--body.form__col--indent
+			.form__col.form__col--body.form__col--indent
+			.form__col.form__col--body.form__col--indent
+			.form__col.form__col--body.form__col--indent
+			.form__subline
+				.form__select.form__select--add.form__select--small
+					.form__select-header
+						.form__selected
+							| UN
+						svg.icon.icon--triangle
+							use.icon__item(xlink:href='#triangle')
+					ul.form__list
+						
+						- for (let i = 0; i < 4; i++)
+							li.form__item
+								!=(i + 1)
 				
+				.form__field.form__field--add.form__field--small
+					label.form__label
+						input.form__input.form__input--add(type="text" placeholder="UN Number")
+				.form__field.form__field--add.form__field--large
+					label.form__label
+						input.form__input.form__input--add(type="text" placeholder="Proper Shipping Name")
+				.form__field.form__field--add.form__field--large.form__field--haz
+					label.form__label.form__label--haz
+						input.form__input.form__input--add(type="text" placeholder="Hazard Class")
+					button.form__btn.form__btn--info(type="button")
+						| ?
+				
+				.form__select.form__select--add.form__select--large.form__select--pgroup
+					.form__select-header
+						.form__selected
+							| Packing Group
+						svg.icon.icon--triangle
+							use.icon__item(xlink:href='#triangle')
+					ul.form__list
+						
+						- for (let i = 0; i < 4; i++)
+							li.form__item
+								| Group #{i + 1}
+			
+				.form__select.form__select--add.form__select--large
+					.form__select-header
+						.form__selected
+							| Packing Type
+						svg.icon.icon--triangle
+							use.icon__item(xlink:href='#triangle')
+					ul.form__list
+						
+						- for (let i = 0; i < 4; i++)
+							li.form__item
+								| Type #{i + 1}
+						

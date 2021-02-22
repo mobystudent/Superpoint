@@ -130,6 +130,10 @@
         <image width="16" height="17" id="b6" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAACz0lEQVQ4T2WTX4hUVRzHP7+7e2fb0RIthIxVMoQQsocIStAKCQR7S3aVfEmKoodVyXvv7ty1OQ9z9869M7vFkASLUSRokIL0Uthblo9F9CBp6mIUEYQby7rZ3Tm/ONOujeN5Or9zfufz+/c9Qs+aypJdbeRVUX0e4WGgAGZV+RLPHg/DY1e6n8iKMT1t1rUL/xNgD2CBiyjXEEoo2xC2Am2gvunRLdXh4WG3pwNoNMx6rP8NsAX0Q4v/ThRFv3VHaqbpU+rZFrAd5bOFv4t9xhj7HyCrfQGyW1XeCscqH6iqTOXpywo7RFWspxeCID4zMzPTPz/350lFR1QlCMcqTWlmyYsK5xVOhFH8egeY1xqoHF2uX4ES6EdBNHGw1WoN3F6c/x7YULTlMcmzyVOCjlj6h1zaxpjyqkH/L2CuaIurG79PXePWLFlv3fj4+M08r42Iyqcgr0kjS34FrgVRvMM5H69WV98aLL2knvwShpVvjTH3lQf9WYH1S9Z70AE6PuXSHOgpB2grcjqMKgd6R5qm6Vrfs2cVXgBpBVHl0IqPC6xwyQEWgc+DKB7pBTTy5CTKARGJ3w7GUxFx/eisRpb8AXznAD8Cq4Io3twLyLPkvMDaIIqf7r6bmqoN2SW5AfK+NPNapiqhqD53dGzi67tmn03utaKrwzD+uPu8kSUGqIqyW+r1+sY+af8EXF5YLJ41xtzqSnMW2BREcZdia4+0C3FTubqwWDy5LKQkBmoKX/mlYvjIETPnIHmeHBTVB4Jo4r0VaHNy8nHt00sruukAnPKaeToNehj0dxHJVey5IDh23Rjjlcv+NhH70MDAmgujo6O3G1lyEXjC0r/hTmqdztaTfQg5MLQc0f3EPsBbtm+CnkHEoryBypt3AZxTtVot3T9Y2oWnOxXZKJZ/VPgZdF6R/QLP/N9Q/eEeQO8oe+1303Tzkmf3A684ef8LejU4v0qS2cMAAAAASUVORK5CYII="></image>
         <use href="#b6"></use>
       </symbol>
+      <symbol id="triangle" viewBox="0 0 7 3">
+        <image width="7" height="3" id="c8" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAR0lEQVQYV2N0dXWtZWRkbGLABLWMIDF3d/eo////z2dgYGBjYGD4ycDAkLBr164VYEkQcHFxsWFiYpr9////lN27dx8FiQEAfC0TUl5JoHgAAAAASUVORK5CYII="></image>
+        <use href="#c8"></use>
+      </symbol>
     </svg>
     <div class="wrapper">
       <header class="header"><a class="logo" href="#">
@@ -193,7 +197,7 @@
           <form class="form" action="#">
             <h3 class="form__title form__title--fraction">Shipper Details</h3>
             <div class="form__wrap form__wrap--company">
-              <div class="form__field">
+              <div class="form__field form__field--company">
                 <label class="form__label form__label--search">
                   <input class="form__input" type="search" placeholder="Company Autocomplete">
                   <button class="form__btn form__btn--search">
@@ -203,7 +207,7 @@
                   </button>
                 </label>
               </div>
-              <div class="form__field">
+              <div class="form__field form__field--company">
                 <h4 class="form__title form__title--field">Company name</h4>
                 <label class="form__label">
                   <input class="form__input" type="text" placeholder="Company name">
@@ -284,7 +288,74 @@
                           </div>
                         </div>
                         <div class="form__line form__line--add">
-                          <div class="form__wrap form__wrap--fields"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__subline">
+                            <div class="form__select form__select--add form__select--small">
+                              <div class="form__select-header">
+                                <div class="form__selected">UN</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">1
+                                </li>
+                                <li class="form__item">2
+                                </li>
+                                <li class="form__item">3
+                                </li>
+                                <li class="form__item">4
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="form__field form__field--add form__field--small">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="UN Number">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large form__field--haz">
+                              <label class="form__label form__label--haz">
+                                <input class="form__input form__input--add" type="text" placeholder="Hazard Class">
+                              </label>
+                              <button class="form__btn form__btn--info" type="button">?</button>
+                            </div>
+                            <div class="form__select form__select--add form__select--large form__select--pgroup">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Group</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Group 1</li>
+                                <li class="form__item">Group 2</li>
+                                <li class="form__item">Group 3</li>
+                                <li class="form__item">Group 4</li>
+                              </ul>
+                            </div>
+                            <div class="form__select form__select--add form__select--large">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Type</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Type 1</li>
+                                <li class="form__item">Type 2</li>
+                                <li class="form__item">Type 3</li>
+                                <li class="form__item">Type 4</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="form__line form__line--info">
                           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>
@@ -451,7 +522,74 @@
                           </div>
                         </div>
                         <div class="form__line form__line--add">
-                          <div class="form__wrap form__wrap--fields"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__subline">
+                            <div class="form__select form__select--add form__select--small">
+                              <div class="form__select-header">
+                                <div class="form__selected">UN</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">1
+                                </li>
+                                <li class="form__item">2
+                                </li>
+                                <li class="form__item">3
+                                </li>
+                                <li class="form__item">4
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="form__field form__field--add form__field--small">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="UN Number">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large form__field--haz">
+                              <label class="form__label form__label--haz">
+                                <input class="form__input form__input--add" type="text" placeholder="Hazard Class">
+                              </label>
+                              <button class="form__btn form__btn--info" type="button">?</button>
+                            </div>
+                            <div class="form__select form__select--add form__select--large form__select--pgroup">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Group</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Group 1</li>
+                                <li class="form__item">Group 2</li>
+                                <li class="form__item">Group 3</li>
+                                <li class="form__item">Group 4</li>
+                              </ul>
+                            </div>
+                            <div class="form__select form__select--add form__select--large">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Type</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Type 1</li>
+                                <li class="form__item">Type 2</li>
+                                <li class="form__item">Type 3</li>
+                                <li class="form__item">Type 4</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="form__line form__line--info">
                           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>
@@ -618,7 +756,74 @@
                           </div>
                         </div>
                         <div class="form__line form__line--add">
-                          <div class="form__wrap form__wrap--fields"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__subline">
+                            <div class="form__select form__select--add form__select--small">
+                              <div class="form__select-header">
+                                <div class="form__selected">UN</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">1
+                                </li>
+                                <li class="form__item">2
+                                </li>
+                                <li class="form__item">3
+                                </li>
+                                <li class="form__item">4
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="form__field form__field--add form__field--small">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="UN Number">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large form__field--haz">
+                              <label class="form__label form__label--haz">
+                                <input class="form__input form__input--add" type="text" placeholder="Hazard Class">
+                              </label>
+                              <button class="form__btn form__btn--info" type="button">?</button>
+                            </div>
+                            <div class="form__select form__select--add form__select--large form__select--pgroup">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Group</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Group 1</li>
+                                <li class="form__item">Group 2</li>
+                                <li class="form__item">Group 3</li>
+                                <li class="form__item">Group 4</li>
+                              </ul>
+                            </div>
+                            <div class="form__select form__select--add form__select--large">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Type</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Type 1</li>
+                                <li class="form__item">Type 2</li>
+                                <li class="form__item">Type 3</li>
+                                <li class="form__item">Type 4</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="form__line form__line--info">
                           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>
@@ -785,7 +990,74 @@
                           </div>
                         </div>
                         <div class="form__line form__line--add">
-                          <div class="form__wrap form__wrap--fields"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__subline">
+                            <div class="form__select form__select--add form__select--small">
+                              <div class="form__select-header">
+                                <div class="form__selected">UN</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">1
+                                </li>
+                                <li class="form__item">2
+                                </li>
+                                <li class="form__item">3
+                                </li>
+                                <li class="form__item">4
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="form__field form__field--add form__field--small">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="UN Number">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large form__field--haz">
+                              <label class="form__label form__label--haz">
+                                <input class="form__input form__input--add" type="text" placeholder="Hazard Class">
+                              </label>
+                              <button class="form__btn form__btn--info" type="button">?</button>
+                            </div>
+                            <div class="form__select form__select--add form__select--large form__select--pgroup">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Group</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Group 1</li>
+                                <li class="form__item">Group 2</li>
+                                <li class="form__item">Group 3</li>
+                                <li class="form__item">Group 4</li>
+                              </ul>
+                            </div>
+                            <div class="form__select form__select--add form__select--large">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Type</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Type 1</li>
+                                <li class="form__item">Type 2</li>
+                                <li class="form__item">Type 3</li>
+                                <li class="form__item">Type 4</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="form__line form__line--info">
                           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>
@@ -952,7 +1224,74 @@
                           </div>
                         </div>
                         <div class="form__line form__line--add">
-                          <div class="form__wrap form__wrap--fields"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__subline">
+                            <div class="form__select form__select--add form__select--small">
+                              <div class="form__select-header">
+                                <div class="form__selected">UN</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">1
+                                </li>
+                                <li class="form__item">2
+                                </li>
+                                <li class="form__item">3
+                                </li>
+                                <li class="form__item">4
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="form__field form__field--add form__field--small">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="UN Number">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large form__field--haz">
+                              <label class="form__label form__label--haz">
+                                <input class="form__input form__input--add" type="text" placeholder="Hazard Class">
+                              </label>
+                              <button class="form__btn form__btn--info" type="button">?</button>
+                            </div>
+                            <div class="form__select form__select--add form__select--large form__select--pgroup">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Group</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Group 1</li>
+                                <li class="form__item">Group 2</li>
+                                <li class="form__item">Group 3</li>
+                                <li class="form__item">Group 4</li>
+                              </ul>
+                            </div>
+                            <div class="form__select form__select--add form__select--large">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Type</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Type 1</li>
+                                <li class="form__item">Type 2</li>
+                                <li class="form__item">Type 3</li>
+                                <li class="form__item">Type 4</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="form__line form__line--info">
                           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>
@@ -1119,7 +1458,74 @@
                           </div>
                         </div>
                         <div class="form__line form__line--add">
-                          <div class="form__wrap form__wrap--fields"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__col form__col--body form__col--indent"></div>
+                          <div class="form__subline">
+                            <div class="form__select form__select--add form__select--small">
+                              <div class="form__select-header">
+                                <div class="form__selected">UN</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">1
+                                </li>
+                                <li class="form__item">2
+                                </li>
+                                <li class="form__item">3
+                                </li>
+                                <li class="form__item">4
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="form__field form__field--add form__field--small">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="UN Number">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large">
+                              <label class="form__label">
+                                <input class="form__input form__input--add" type="text" placeholder="Proper Shipping Name">
+                              </label>
+                            </div>
+                            <div class="form__field form__field--add form__field--large form__field--haz">
+                              <label class="form__label form__label--haz">
+                                <input class="form__input form__input--add" type="text" placeholder="Hazard Class">
+                              </label>
+                              <button class="form__btn form__btn--info" type="button">?</button>
+                            </div>
+                            <div class="form__select form__select--add form__select--large form__select--pgroup">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Group</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Group 1</li>
+                                <li class="form__item">Group 2</li>
+                                <li class="form__item">Group 3</li>
+                                <li class="form__item">Group 4</li>
+                              </ul>
+                            </div>
+                            <div class="form__select form__select--add form__select--large">
+                              <div class="form__select-header">
+                                <div class="form__selected">Packing Type</div>
+                                <svg class="icon icon--triangle">
+                                  <use class="icon__item" xlink:href="#triangle"></use>
+                                </svg>
+                              </div>
+                              <ul class="form__list">
+                                <li class="form__item">Type 1</li>
+                                <li class="form__item">Type 2</li>
+                                <li class="form__item">Type 3</li>
+                                <li class="form__item">Type 4</li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                         <div class="form__line form__line--info">
                           <div class="form__col form__col--body" data-title="Handling Unit Type (H/U)"><span class="form__value">Pallets</span></div>
