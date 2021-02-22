@@ -9,6 +9,8 @@ $(window).on('load', () => {
 	showNav();
 	showSteps(1);
 	resizeModalNav();
+	showSelectList();
+	selectedInSeclect();
 });
 
 function showTabs() {
@@ -71,5 +73,20 @@ function showSteps(id) {
 		} else {
 			$(item).find('.icon__item').attr('xlink:href', `#step${i + 1}`);
 		}
+	});
+}
+
+function showSelectList() {
+	$('.form__select-header').click(function() {
+		$(this).next().slideToggle();
+	})
+}
+
+function selectedInSeclect() {
+	$('.form__item').click(function() {
+		const value = $(this).data('value');
+
+		$(this).parents('.form__select').find('.form__selected').text(value);
+		$('.form__list').slideUp();
 	});
 }

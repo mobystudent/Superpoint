@@ -108,6 +108,7 @@
 
 		&--haz {
 			display: flex;
+			flex-basis: 120px;
 		}
 	}
 
@@ -247,7 +248,7 @@
 		}
 
 		&--add {
-			padding: 21px 0 9px;
+			padding: 21px 0 14px;
 
 			@media screen and (max-width: 1199px) {
 				padding: 25px 0;
@@ -323,7 +324,7 @@
 			1 172px,
 			2 76px,
 			3 142px,
-			4 85px,
+			4 83px,
 			5 439px,
 			6 66px,
 			7 60px,
@@ -558,19 +559,29 @@
 	&__subline {
 		display: flex;
 		flex: 1 1 63%;
-		border-top: 1px solid $gray;
+		position: relative;
 
 		@media screen and (max-width: 1365px) {
 			flex-basis: auto;
 		}
 
-		@media screen and (max-width: 1199px) {
-			border-top: none;
-		}
-
 		@media screen and (max-width: 767px) {
 			flex-flow: wrap;
 			justify-content: space-between;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -21px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: $gray;
+
+			@media screen and (max-width: 1199px) {
+				display: none;
+			}
 		}
 	}
 }
